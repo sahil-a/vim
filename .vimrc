@@ -68,6 +68,9 @@ set showmatch
 " we don't want autocomplete preview in scratch window
 set completeopt-=preview
 
+" allow easy pasting of yanked, not cut, text
+nnoremap <leader>p "0p
+
 
 
 
