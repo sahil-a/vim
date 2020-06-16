@@ -140,6 +140,9 @@ map <C-o> :Buffers<CR>
 " Search commands with Ctrl-k
 map <C-i> :Commands<CR>
 
+" Search files with Ctrl-u
+map <C-u> :Files<CR>
+
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
