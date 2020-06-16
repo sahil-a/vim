@@ -1,3 +1,5 @@
 .netrwhist
 view/**
 plugged/**
+**.DS_Store
+bundles/.DS_Store
