@@ -86,6 +86,7 @@ call plug#begin()
 
 " LIST PLUGINS HERE
 Plug 'mattn/emmet-vim'
+Plug 'APZelos/blamer.nvim'
 Plug 'yggdroot/indentline'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'preservim/nerdtree'
