@@ -20,6 +20,9 @@
 
 " GENERAL SECTION
 
+" so that we can click and scroll as expected
+set mouse=a
+
 " set leader key to comma
 let mapleader = ","
 
