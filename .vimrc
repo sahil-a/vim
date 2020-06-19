@@ -117,6 +117,19 @@ call plug#end()
 
 
 
+" BLAMER.NVIM CONFIG
+highlight Blamer guifg=lightgrey
+let g:blamer_delay = 150
+
+
+
+
+
+
+
+
+
+
 " NERDCOMMENTER CONFIG
 
 " Add spaces after comment delimiters by default
