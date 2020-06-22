@@ -120,7 +120,22 @@ call plug#end()
 
 
 
+" VIM PRETTIER CONFIG
+
+" run prettier on ctrl-y
+map <C-y> :Prettier<CR>
+
+
+
+
+
+
+
+
+
 " BLAMER.NVIM CONFIG
+
+" make blamer faster and grey colored
 highlight Blamer guifg=lightgrey
 let g:blamer_delay = 150
 
