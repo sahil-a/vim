@@ -153,6 +153,10 @@ let g:blamer_delay = 150
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
+" Remove 'Press ? for help'
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
 
 
 
