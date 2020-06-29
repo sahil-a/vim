@@ -74,6 +74,9 @@ set completeopt-=preview
 " allow easy pasting of yanked, not cut, text
 nnoremap <leader>p "0p
 
+" don't wait for special characters after escape key
+set ttimeoutlen=0
+
 
 
 
@@ -167,6 +170,9 @@ let NERDTreeDirArrows = 1
 
 
 " FZF CONFIG
+
+" Floating window
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.4 } }
 
 " Search files with Ctrl-p
 map <C-p> :GFiles<CR>
