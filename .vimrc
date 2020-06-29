@@ -93,6 +93,7 @@ call plug#begin()
 " LIST PLUGINS HERE
 Plug 'mattn/emmet-vim'
 Plug 'APZelos/blamer.nvim'
+Plug 'tpope/vim-fugitive'
 Plug 'yggdroot/indentline'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'preservim/nerdtree'
@@ -113,6 +114,20 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+
+
+
+
+
+
+
+
+
+" VIM FUGITIVE CONFIG
+
+" Easy status
+nmap <leader>g :G<CR>
 
 
 
