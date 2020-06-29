@@ -58,6 +58,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <C-w> :q<CR>
+
+" easily open location list for errors
+nnoremap <C-D> :lopen<CR>
 
 " have backspace work normally in insert mode
 set backspace=indent,eol,start
@@ -94,6 +98,7 @@ call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'yggdroot/indentline'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'preservim/nerdtree'
