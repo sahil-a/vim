@@ -206,6 +206,9 @@ map <C-i> :Commands<CR>
 " Search files with Ctrl-u
 map <C-u> :Files<CR>
 
+" Search directory of current file with Ctr-t
+map <C-t> :FZF %:p:h<CR>
+
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
