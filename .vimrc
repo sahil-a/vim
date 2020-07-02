@@ -84,6 +84,9 @@ set ttimeoutlen=0
 " copy
 map <leader>y "+y
 
+" allow 100 tabs rather than just 10
+set tabpagemax=100
+
 
 
 
