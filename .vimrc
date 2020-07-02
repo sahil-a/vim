@@ -76,10 +76,13 @@ set showmatch
 set completeopt-=preview
 
 " allow easy pasting of yanked, not cut, text
-nnoremap <leader>p "0p
+map <leader>p "0p
 
 " don't wait for special characters after escape key
 set ttimeoutlen=0
+
+" copy
+map <leader>y "+y
 
 
 
