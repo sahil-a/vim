@@ -87,6 +87,9 @@ map <leader>y "+y
 " allow 100 tabs rather than just 10
 set tabpagemax=100
 
+" easy command mode
+nnoremap ; :
+
 
 
 
