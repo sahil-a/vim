@@ -90,6 +90,9 @@ set tabpagemax=100
 " easy command mode
 nnoremap ; :
 
+" temporary to learn better movement
+let g:hardtime_default_on = 1
+
 
 
 
@@ -127,6 +130,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'takac/vim-hardtime'
 
 call plug#end()
 
