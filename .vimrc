@@ -90,6 +90,9 @@ set tabpagemax=100
 " easy command mode
 nnoremap ; :
 
+" repeat f or t
+nnoremap ' ;
+
 " temporary to learn better movement
 let g:hardtime_default_on = 1
 
