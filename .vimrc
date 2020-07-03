@@ -105,6 +105,7 @@ call plug#begin()
 
 " LIST PLUGINS HERE
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
