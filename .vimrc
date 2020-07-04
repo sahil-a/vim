@@ -111,6 +111,8 @@ call plug#begin()
 
 " LIST PLUGINS HERE
 Plug 'mattn/emmet-vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
@@ -146,10 +148,67 @@ call plug#end()
 
 
 
+" LIMELIGHT/GOYO CONFIG
+
+" easy enable/disable
+nnoremap <leader>gy :call GoyoToggle()<cr>
+
+function! GoyoToggle()
+    if exists('#goyo')
+     	Goyo!
+    else
+		Goyo
+    endif
+endfunction
+
+" set dimmed color for limelight
+let g:limelight_conceal_ctermfg = 'gray'
+
+" enable Limelight on entering Goyo,
+" get rid of weird carrot line at bottom
+" get rid of cursorline in Goyo
+" quit Goyo and vim together
+function! s:goyo_enter()
+  let b:quitting = 0
+  let b:quitting_bang = 0
+  autocmd QuitPre <buffer> let b:quitting = 1
+  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+  hi StatusLineNC ctermfg=white
+  Limelight
+  set nocursorline
+endfunction
+
+function! s:goyo_leave()
+  " Quit Vim if this is the only remaining buffer
+  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    if b:quitting_bang
+      qa!
+    else
+      qa
+    endif
+  endif
+  Limelight!
+  set cursorline
+  AirlineToggle
+  AirlineToggle
+  AirlineRefresh
+endfunction
+
+autocmd! User GoyoEnter call <SID>goyo_enter()
+autocmd! User GoyoLeave call <SID>goyo_leave()
+
+
+
+
+
+
+
+
+
 " VIM FUGITIVE CONFIG
 
 " Easy status
-nmap <leader>g :G<CR>
+nmap <leader>gs :G<CR>
 
 
 
@@ -330,12 +389,7 @@ set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
