@@ -192,6 +192,7 @@ function! s:goyo_leave()
   AirlineToggle
   AirlineToggle
   AirlineRefresh
+  highlight LineNr ctermfg=black
 endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()
