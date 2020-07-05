@@ -111,6 +111,7 @@ call plug#begin()
 
 " LIST PLUGINS HERE
 Plug 'mattn/emmet-vim'
+Plug 'lervag/vimtex'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
