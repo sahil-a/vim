@@ -212,6 +212,10 @@ autocmd! User GoyoLeave call <SID>goyo_leave()
 " Easy status
 nmap <leader>gs :G<CR>
 
+" better diff management (useful when managing merges with vim-fugitive)
+nmap d2 :diffget //2<Cr>
+nmap d3 :diffget //3<Cr>
+
 
 
 
