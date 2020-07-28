@@ -61,7 +61,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-w> :q<CR>
 
 " easily open location list for errors
-nnoremap <C-D> :lopen<CR>
+nnoremap <C-D> :CocDiagnostics<CR>
 
 " have backspace work normally in insert mode
 set backspace=indent,eol,start
@@ -277,17 +277,14 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.4 } }
 " Search files with Ctrl-p
 map <C-p> :GFiles<CR>
 
-" Search buffers with Ctrl-l
-map <C-o> :Buffers<CR>
+" Search files with Ctrl-o
+map <C-o> :Files<CR>
 
-" Search commands with Ctrl-k
-map <C-i> :Commands<CR>
+" Search buffers with Ctrl-i
+map <C-i> :Buffers<CR>
 
-" Search files with Ctrl-u
-map <C-u> :Files<CR>
-
-" Search directory of current file with Ctr-t
-map <C-t> :FZF %:p:h<CR>
+" Search directory of current file with Ctrl-u
+map <C-u> :FZF %:p:h<CR>
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
