@@ -114,6 +114,9 @@ execute "set rtp+=" . g:opamshare . "/merlin/vim"
 inoremap <C-n> <C-x><C-o>
 inoremap <C-@> <C-n>
 
+" for jump to definition in merlin
+nnoremap <localleader>d :MerlinLocate<CR>
+
 
 
 
