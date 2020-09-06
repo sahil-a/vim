@@ -25,6 +25,7 @@ set mouse=a
 
 " set leader key to comma
 let mapleader = ","
+let maplocalleader = "."
 
 " set number of visual spaces per tab character
 set tabstop=4
@@ -93,6 +94,25 @@ nnoremap ; :
 " repeat f or t
 nnoremap ' ;
 
+
+
+
+
+
+
+
+
+
+
+" OCAML SECTION
+
+set rtp^="/Users/sahil/.opam/4.09.0/share/ocp-indent/vim"
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+" for completions
+inoremap <C-n> <C-x><C-o>
+inoremap <C-@> <C-n>
 
 
 
