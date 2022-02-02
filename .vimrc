@@ -33,8 +33,8 @@ set shiftwidth=4
 
 " use spaces for tabs (OFF)
 "
-" set softtabstop=4
-" set expandtab
+set softtabstop=4
+set expandtab
 
 " show relative line number
 set number
@@ -137,7 +137,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
 Plug 'APZelos/blamer.nvim'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'yggdroot/indentline'
 Plug 'AndrewRadev/tagalong.vim'
@@ -158,6 +158,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'takac/vim-hardtime'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
 call plug#end()
 
