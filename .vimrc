@@ -131,6 +131,7 @@ nnoremap <localleader>d :MerlinLocate<CR>
 call plug#begin()
 
 " LIST PLUGINS HERE
+Plug 'justinmk/vim-sneak'
 Plug 'mattn/emmet-vim'
 Plug 'lervag/vimtex'
 Plug 'junegunn/limelight.vim'
@@ -162,6 +163,13 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 call plug#end()
+
+
+" SNEAK VIM CONFIG
+" note: we cannot use without labels as ; is remapped to :
+"
+let g:sneak#label = 1
+
 
 
 
@@ -311,8 +319,8 @@ map <C-i> :Buffers<CR>
 " Search directory of current file with Ctrl-u
 map <C-u> :FZF %:p:h<CR>
 
-" Search commands with Ctrl-i
-map <C-t> :Commands<CR>
+" Search commands with Ctrl-e
+map <C-e> :Commands<CR>
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
